@@ -18,7 +18,7 @@ async function getUser() {
 }
 
 const job = new cron.CronJob({
-  cronTime: '0 */1 * * * *', // Chạy Jobs vào 23h30 hằng đêm
+  cronTime: '0 0 */1 * * *', // Chạy Jobs vào 23h30 hằng đêm
   onTick: function() {
     getUser()
     console.log('Cron jub runing...32');
